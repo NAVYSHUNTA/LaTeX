@@ -1,0 +1,39 @@
+% これは書籍、卒論などページ数が多いものを作成するときのテンプレートである。
+% 1つのファイルに書くのではなく、ファイルを分割して\include{}で取り込む方式を採用した。
+\documentclass[a4paper, 11pt]{jsbook}
+\usepackage{amsmath, amssymb}  % 数式用
+\usepackage{bm} % ベクトルなどの太字斜体用
+\usepackage{listings} % ソースコード挿入用
+\usepackage{graphicx} % 画像挿入用
+\usepackage{subcaption} % 表や画像を横並びにする
+\usepackage{wrapfig} % 表や画像の周りに文字を配置する
+\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} % 余白の設定用
+\setcounter{secnumdepth}{2}
+\title{\LaTeX{}の使い方}
+\author{Shunta Nakamura}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+%\part{}
+%\chapter{}
+%\section{}
+%\subsection{}
+\part{\LaTeX{}の基礎} % 省略可
+    \chapter{いろいろな文字・記号}
+        \section{ギリシャ文字}
+        \section{数式記号}
+            \subsection{オイラーの公式を入力してみる}
+
+%\include{chap1} % chap1.texファイルで作成した内容を取り込む
+%\include{chap2} % chap2.texファイルで作成した内容を取り込む
+%\include{chap3} % chap3.texファイルで作成した内容を取り込む
+%\include{appendix1} % appendix1.texファイルで作成した内容を取り込む
+%\include{appendix2} % appendix2.texファイルで作成した内容を取り込む
+%\include{appendix3} % appendix3.texファイルで作成した内容を取り込む
+\chapter*{謝辞} % \chapterに*を付けると章番号は省略される
+\addcontentsline{toc}{chapter}{謝辞} % 目次に追加する
+
+%\include{biblography} % 参考文献
+\end{document}
